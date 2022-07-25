@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <script src="galleryScript.js"></script>
     </head>
     <body>
         <header>
@@ -11,9 +12,42 @@
             <h2>Module 15 of the Codecademy Full Stack Engineer Career Path projects</h2>
         </header>
         <main>
+            <section id="remembo" class="moduleSection">
+                <figure>
+                    <img alt="remembo" src="remembo.png" onclick="setGallery(this,'https://remembo.herokuapp.com/')">
+                    <figcaption>Fullstack PERN Web App: memorisation tool</figcaption>
+                </figure>
+                <header>
+                    <h3>REMEMbO</h3>
+                    <h4>create and memorise lists of information</h4>
+                </header>
+                <section>
+                    <p>Backend featuring Node, Express, Passport, PostgreSQL.</p>
+                    <p>Frontend using React, Redux, React Router.</p>
+                    <p><a href="https://remembo.herokuapp.com/">All hosted on Heroku.</a></p>
+                    <p><a href="https://github.com/stevenmalley/remembo">Git and Github were used for version control.</a></p>
+                </section>
+            </section><!-- end remembo -->
+            <section id="shoppe" class="moduleSection">
+                <figure>
+                    <img alt="ye olde online shoppe" src="shoppe.png" onclick="setGallery(this,'https://ye-shoppe.herokuapp.com/')">
+                    <figcaption>Fullstack Web App: online shop</figcaption>
+                </figure>
+                <header>
+                    <h3>Shoppe</h3>
+                    <h4>ye olde online shoppe</h4>
+                </header>
+                <section>
+                    <p>Backend featuring Node, Express, Passport, PostgreSQL.</p>
+                    <p>Frontend using React, Redux, React Router.</p>
+                    <p>Integrates Stripe for payments and Sign In With Google.</p>
+                    <p><a href="https://ye-shoppe.herokuapp.com/">All hosted on Heroku.</a></p>
+                    <p><a href="https://github.com/stevenmalley/shoppe">Git and Github were used for version control.</a></p>
+                </section>
+            </section><!-- end shoppe -->
             <section id="module12" class="moduleSection">
                 <figure>
-                    <a href="drilTweets.png"><img alt="random @dril tweets" src="drilTweets.png"></a>
+                    <img alt="random @dril tweets" src="drilTweets.png" onclick="setGallery(this)">
                     <figcaption>random @dril tweets</figcaption>
                 </figure>
                 <header>
@@ -28,7 +62,7 @@
             </section><!-- end module12 -->
             <section id="module15" class="moduleSection">
                 <figure>
-                    <a href="portfolio.png"><img alt="this page" src="portfolio.png"></a>
+                    <img alt="this page" src="portfolio.png" onclick="setGallery(this)">
                     <figcaption>this page!</figcaption>
                 </figure>
                 <header>
@@ -43,7 +77,7 @@
             </section><!-- end module15 -->
             <section id="module22-1" class="moduleSection">
                 <figure>
-                    <a href="react-router.png"><img alt="react router project" src="react-router.png"></a>
+                    <img alt="react router project" src="react-router.png" onclick="setGallery(this)">
                     <figcaption>React Router project</figcaption>
                 </figure>
                 <header>
@@ -58,7 +92,7 @@
             </section><!-- end module22-1 -->
             <section id="module22-2" class="moduleSection">
                 <figure>
-                    <a href="adopt-a-pet.png"><img alt="adopt a pet project" src="adopt-a-pet.png"></a>
+                    <img alt="adopt a pet project" src="adopt-a-pet.png" onclick="setGallery(this)">
                     <figcaption>Adopt A Pet project</figcaption>
                 </figure>
                 <header>
@@ -71,23 +105,11 @@
                     <p><a href="https://github.com/stevenmalley/adopt-a-pet">Git and Github were used for version control.</a></p>
                 </section>
             </section><!-- end module22-2 -->
-            <section id="shoppe" class="moduleSection">
-                <figure>
-                    <a href="https://ye-shoppe.herokuapp.com/"><img alt="ye olde online shoppe" src="shoppe.png"></a>
-                    <figcaption>Fullstack Web App: online shop</figcaption>
-                </figure>
-                <header>
-                    <h3>Shoppe</h3>
-                    <h4>ye olde online shoppe</h4>
-                </header>
-                <section>
-                    <p>Backend featuring Node, Express, PostgreSQL.</p>
-                    <p>Frontend using React, Redux, React Router.</p>
-                    <p>Integrates Stripe for payments and Sign In With Google.</p>
-                    <p><a href="https://ye-shoppe.herokuapp.com/">All hosted on Heroku.</a></p>
-                    <p><a href="https://github.com/stevenmalley/shoppe">Git and Github were used for version control.</a></p>
-                </section>
-            </section><!-- end shoppe -->
         </main>
+        <div id="gallery" onclick="closeGallery()">
+          <img id="galleryImg" src="">
+          <div id="galleryURLMessage"></div>
+          <div id="galleryCloseMessage">tap to close gallery</div>
+        </div>
     </body>
 </html>

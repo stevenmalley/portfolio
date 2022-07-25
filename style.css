@@ -42,6 +42,7 @@ body>header h2 {
     height: 100%;
     text-align: center;
     margin-bottom: 5px;
+    cursor: pointer;
 }
 
 .moduleSection figure figcaption {
@@ -70,6 +71,35 @@ body>header h2 {
 .moduleSection:nth-child(odd) {
     grid-template-areas: "row1 figure"
                             "row2 figure";
+}
+
+#gallery {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+}
+
+#galleryImg {
+  max-width: 80%;
+  max-height: 80%;
+  margin-top: 5%;
+}
+
+#galleryCloseMessage {
+  margin-top: 20px;
+  font-size: 1.6em;
+  color: #aaa;
+}
+
+#galleryURLMessage a {
+  font-size: 1.6em;
+  color: #ddd;
 }
 
 
